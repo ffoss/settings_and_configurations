@@ -1,0 +1,113 @@
+// https://code.visualstudio.com/api/references/theme-color#integrated-terminal-colors
+{
+  "window.zoomLevel": 1,
+  "workbench.colorTheme": "Solarized Dark",
+  "python.formatting.provider": "black",
+  // Define Pylance as language server for Python
+  // To get import quickfixes
+  "python.languageServer": "Pylance",
+  "python.formatting.autopep8Path": "${workspaceFolder}/.venv/bin/autopep8",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "material-icon-theme.opacity": 0.8,
+  "editor.minimap.enabled": false,
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintUseMinimalCheckers": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.pydocstyleEnabled": true,
+  "python.sortImports.args": [
+    "--force-single-line-imports"
+  ],
+  "files.associations": {
+    "*.tf": "terraform",
+    "*.org": "org"
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "org.todoKeywords": [
+    "TODO",
+    "DONE",
+    "WAIT",
+    "SCHD"
+  ],
+  // ** Zen Mode ** //
+  "zenMode.hideStatusBar": true,
+  "zenMode.hideTabs": true,
+  "zenMode.fullScreen": false,
+  "zenMode.centerLayout": false,
+  "zenMode.restore": true,
+  "zenMode.hideLineNumbers": false,
+  // ** Zen Mode ** //
+  "terminal.external.osxExec": "iTerm.app",
+  "workbench.editor.enablePreview": false,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "workbench.colorCustomizations": {
+    "terminal.ansiWhite": "#959a9d",
+    "terminal.ansiBrightWhite": "#f5efcf",
+    "[Solarized Dark]": {
+      "editor.background": "#002b36",
+      "activityBar.background": "#002b39",
+      "sideBar.background": "#013544",
+      "editor.selectionForeground": "#7b9702",
+      //    "editor.selectionBackground": "#1c3f3d",
+    }
+  },
+  "editor.tokenColorCustomizations": {
+    "[Solarized Dark]": {
+      "textMateRules": [
+        {
+          "scope": [
+            "entity.name.class",
+            "entity.name.type",
+            "entity.name.namespace",
+            "entity.name.scope-resolution",
+          ],
+          "settings": {
+            "foreground": "#af6900",
+          }
+        },
+        {
+          "scope": [
+            "string.quoted.docstring.multi"
+          ],
+          "settings": {
+            "foreground": "#01bd94",
+            "fontStyle": "italic"
+          }
+        },
+        {
+          "scope": [
+            "constant.character",
+            "constant.other"
+          ],
+          "settings": {
+            "foreground": "#d5d800"
+          }
+        },
+      ],
+    }
+  },
+  "git.autofetch": true,
+  // ** Vim settings ** //
+  "vim.foldfix": true,
+  // ** Vim settings ** //
+  "[yaml]": {
+    "editor.autoIndent": "advanced"
+  },
+  "redhat.telemetry.enabled": true,
+  "editor.largeFileOptimizations": false,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "editor.formatOnSave": true,
+  "workbench.statusBar.visible": false,
+}
