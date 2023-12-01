@@ -1,12 +1,10 @@
 // https://code.visualstudio.com/api/references/theme-color#integrated-terminal-colors
 {
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 2,
   "workbench.colorTheme": "Solarized Dark",
-  "python.formatting.provider": "black",
   // Define Pylance as language server for Python
   // To get import quickfixes
   "python.languageServer": "Pylance",
-  "python.formatting.autopep8Path": "${workspaceFolder}/.venv/bin/autopep8",
   "editor.quickSuggestions": {
     "other": true,
     "comments": false,
@@ -14,15 +12,6 @@
   },
   "material-icon-theme.opacity": 0.8,
   "editor.minimap.enabled": false,
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": true,
-  "python.linting.pylintUseMinimalCheckers": false,
-  "python.linting.flake8Enabled": true,
-  "python.linting.mypyEnabled": true,
-  "python.linting.pydocstyleEnabled": true,
-  "python.sortImports.args": [
-    "--force-single-line-imports"
-  ],
   "files.associations": {
     "*.tf": "terraform",
     "*.org": "org"
@@ -106,8 +95,17 @@
   "redhat.telemetry.enabled": true,
   "editor.largeFileOptimizations": false,
   "[python]": {
-    "editor.formatOnType": true
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
   },
+  "isort.args": [
+    "--profile",
+    "black",
+    "--force-single-line-imports",
+  ],
   "editor.formatOnSave": true,
-  "workbench.statusBar.visible": false,
 }
